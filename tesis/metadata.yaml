@@ -1,0 +1,19 @@
+---
+title: "Modernización de Infraestructura: De IIS On-Premises a OpenShift con GitOps"
+author: "Nicolás Miretti"
+date: 2026
+lang: es
+documentclass: report
+fontsize: 12pt
+geometry: margin=2.5cm
+toc: true
+toc-depth: 3
+numbersections: true
+header-includes:
+  - \usepackage{fancyhdr}
+  - \pagestyle{fancy}
+  - \fancyhead[L]{Tesis de Ingeniería Informática}
+  - \fancyhead[R]{Nicolás Miretti}
+  - \usepackage{float}
+  - \floatplacement{figure}{H}
+---
