@@ -10,7 +10,7 @@ Repositorio de trabajo para la **tesis de Ingenieria Informatica** de Nicolas Mi
 
 **Modernizacion de infraestructura: de IIS on-premises a OpenShift con GitOps.**
 
-Se documenta el proceso real de transformacion tecnologica de una empresa, desde una infraestructura legacy basada en IIS con deploys manuales, hacia una plataforma cloud-native con OpenShift, Argo CD, GitOps e infraestructura como codigo.
+Se documenta el proceso real de transformacion tecnologica de una empresa, desde una infraestructura legacy basada en IIS con deploys manuales, hacia una plataforma basada en OpenShift (on-premises y ARO en Azure), Argo CD, GitOps e infraestructura como codigo. No es una migracion a cloud puro, sino un modelo hibrido.
 
 ## Enfoque Principal
 
@@ -27,7 +27,7 @@ Cada etapa se contrasta con un "antes vs despues".
 ## Stack Tecnologico
 
 - **Antes**: IIS, Windows Server, deploys manuales, herramientas CI/CD legacy.
-- **Despues**: Red Hat OpenShift, Argo CD, Helm/Kustomize, Red Hat Developer Hub, Ansible.
+- **Despues**: Red Hat OpenShift (on-prem) + ARO (Azure), Argo CD, Helm/Kustomize, Red Hat Developer Hub, Ansible.
 
 ## Estructura del Repositorio
 

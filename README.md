@@ -9,7 +9,7 @@ Nicolas Miretti
 
 ## Idea General
 
-Esta tesis documenta el proceso de modernizacion tecnologica de una empresa, transitando desde una infraestructura tradicional basada en **IIS on-premises** con herramientas de CI/CD obsoletas, hacia un modelo cloud-native basado en **Red Hat OpenShift** con practicas de **GitOps**.
+Esta tesis documenta el proceso de modernizacion tecnologica de una empresa, transitando desde una infraestructura tradicional basada en **IIS on-premises** con herramientas de CI/CD obsoletas, hacia una plataforma basada en **Red Hat OpenShift** con practicas de **GitOps**. El despliegue es **modelo hibrido**: OpenShift on-premises y **ARO (Azure Red Hat OpenShift)** para algunos workloads en la nube.
 
 ## Contexto Inicial (El "Antes")
 
@@ -53,7 +53,7 @@ El proceso no fue lineal ni instantaneo. Paso por varias etapas que reflejan la 
 
 | Componente | Tecnologia |
 |---|---|
-| Plataforma de contenedores | Red Hat OpenShift |
+| Plataforma de contenedores | Red Hat OpenShift (on-prem) + ARO (Azure) |
 | GitOps / Continuous Delivery | Argo CD |
 | Portal de desarrollo | Red Hat Developer Hub |
 | Automatizacion operativa | Ansible |
