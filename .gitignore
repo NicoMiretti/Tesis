@@ -1,0 +1,17 @@
+# Archivos y formatos a ignorar
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
+
+# Archivos sensibles
+.env
+*.key
+*.pem
+credentials.*
+
+# Editores
+.vscode/
+.idea/
+*.swp
+*.swo

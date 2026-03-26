@@ -78,6 +78,25 @@ El proceso no fue lineal ni instantaneo. Paso por varias etapas que reflejan la 
 6. **Resultados y Metricas** - Comparacion antes/despues, mejoras obtenidas.
 7. **Conclusiones y Trabajo Futuro** - Reflexiones y proximos pasos.
 
+## Estructura del Repositorio
+
+```
+Tesis/
+├── README.md              # Este archivo
+├── CONTEXT.md             # Contexto para IAs que trabajen con el repo
+├── docs/
+│   ├── internas/          # Documentacion de la empresa (sanitizada)
+│   ├── externas/          # Documentacion publica de tecnologias
+│   └── diagramas/         # Arquitectura, flujos, capturas
+├── fuentes/               # Material bibliografico (libros, papers, articulos)
+├── tesis/
+│   ├── capitulos/         # Cada capitulo en .md separado
+│   └── assets/            # Imagenes y recursos del documento
+└── ejemplos/
+    ├── antes/             # Scripts, configs IIS, herramientas legacy
+    └── despues/           # Helm, ArgoCD, Ansible, pipelines modernos
+```
+
 ---
 
 > Este documento es un punto de partida. Se ira refinando a medida que avance el desarrollo de la tesis.
