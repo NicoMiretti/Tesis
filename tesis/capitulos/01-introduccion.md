@@ -1,6 +1,6 @@
-# Capitulo 1 - Introduccion
+# Introduccion
 
-## 1.1 Contexto
+## Contexto
 
 En los ultimos años, las organizaciones de tecnologia han enfrentado una presion creciente por acelerar la entrega de software, mejorar la confiabilidad de sus sistemas y reducir los costos operativos asociados a infraestructuras tradicionales. Lo que antes era aceptable, como servidores configurados manualmente, despliegues coordinados por correo electronico y procesos que dependian del conocimiento de unas pocas personas, hoy representa un riesgo operativo y una barrera para la competitividad.
 
@@ -8,7 +8,7 @@ La empresa objeto de este trabajo no es ajena a esta realidad. Durante años, su
 
 Frente a este escenario, la organizacion inicio un proceso de modernizacion que busca transformar la forma en que se construye, despliega y opera el software. No se trato de un cambio instantaneo ni de una migracion completa a la nube publica, sino de una **transicion progresiva** hacia un modelo hibrido basado en **Red Hat OpenShift** (tanto on-premises como en Azure a traves de **ARO - Azure Red Hat OpenShift**), incorporando practicas de **GitOps**, **infraestructura como codigo** y herramientas modernas de automatizacion.
 
-## 1.2 Problema
+## Problema
 
 El modelo de infraestructura tradicional de la empresa presentaba una serie de problemas que impactaban tanto en la operacion diaria como en la capacidad de evolucion tecnologica:
 
@@ -21,7 +21,7 @@ El modelo de infraestructura tradicional de la empresa presentaba una serie de p
 
 Estos problemas no eran exclusivos del area de aplicaciones web. La empresa tambien operaba herramientas como **Control-M** para scheduling de procesos batch, **aplicaciones Java legacy** y **procesos de RPA (Robotic Process Automation)**, todos en proceso de evaluacion o modernizacion. Sin embargo, el alcance de esta tesis se centra en el eje principal de la transformacion: **la plataforma de contenedores y el modelo de entrega de software**.
 
-## 1.3 Objetivos
+## Objetivos
 
 ### Objetivo general
 
@@ -35,7 +35,7 @@ Documentar y analizar el proceso de modernizacion de la infraestructura de entre
 4. Analizar las decisiones tecnicas tomadas en cada etapa y sus justificaciones.
 5. Evaluar los resultados obtenidos, comparando el estado anterior con el actual en terminos de eficiencia, estandarizacion y autonomia de los equipos.
 
-## 1.4 Alcance
+## Alcance
 
 Esta tesis cubre los siguientes aspectos:
 
@@ -54,7 +54,7 @@ Esta tesis cubre los siguientes aspectos:
 - Detalles de la arquitectura interna de las aplicaciones (microservicios, codigo fuente, etc.).
 - Aspectos comerciales o financieros de la transformacion.
 
-## 1.5 Metodologia
+## Metodologia
 
 El enfoque de esta tesis es **descriptivo y basado en la experiencia directa** del autor como parte del equipo que llevo adelante la modernizacion. Se documenta el proceso tal como ocurrio, con sus aciertos, errores y decisiones iterativas.
 
@@ -65,7 +65,7 @@ La metodologia incluye:
 - **Comparacion antes/despues**: cada etapa se contrasta con el estado previo para evidenciar las mejoras o los desafios introducidos.
 - **Ejemplos tecnicos reales**: se incluyen configuraciones, manifiestos y capturas (sanitizados) para ilustrar los conceptos con casos concretos.
 
-## 1.6 Estructura del documento
+## Estructura del documento
 
 El presente documento se organiza de la siguiente manera:
 

@@ -5,15 +5,41 @@ date: 2026
 lang: es
 documentclass: report
 fontsize: 12pt
-geometry: margin=2.5cm
+geometry: margin=2.54cm
+linestretch: 2
 toc: true
 toc-depth: 3
 numbersections: true
 header-includes:
+  # Fuente serif (Times New Roman o similar) - APA
+  - \usepackage{mathptmx}
+  # Encabezado con titulo abreviado - APA
   - \usepackage{fancyhdr}
   - \pagestyle{fancy}
-  - \fancyhead[L]{Tesis de Ingeniería Informática}
-  - \fancyhead[R]{Nicolás Miretti}
+  - \fancyhf{}
+  - \fancyhead[L]{\small\textit{MODERNIZACIÓN DE INFRAESTRUCTURA}}
+  - \fancyhead[R]{\small\thepage}
+  - \renewcommand{\headrulewidth}{0pt}
+  # Figuras
   - \usepackage{float}
   - \floatplacement{figure}{H}
+  # Sangria de primera linea - APA
+  - \usepackage{indentfirst}
+  - \setlength{\parindent}{1.27cm}
+  # Titulos alineados a la izquierda - APA
+  - \usepackage{titlesec}
+  - \titleformat{\chapter}[display]{\normalfont\bfseries\Large}{Capítulo \thechapter}{0.5em}{}
+  - \titleformat{\section}{\normalfont\bfseries\large}{\thesection}{0.5em}{}
+  - \titleformat{\subsection}{\normalfont\bfseries\normalsize}{\thesubsection}{0.5em}{}
+  - \titleformat{\subsubsection}{\normalfont\bfseries\itshape\normalsize}{\thesubsubsection}{0.5em}{}
+  # Espaciado despues de titulos
+  - \titlespacing*{\chapter}{0pt}{-20pt}{20pt}
+  - \titlespacing*{\section}{0pt}{12pt}{6pt}
+  - \titlespacing*{\subsection}{0pt}{12pt}{6pt}
+  # Captions de tablas y figuras - APA
+  - \usepackage{caption}
+  - \captionsetup{labelsep=newline, justification=raggedright, singlelinecheck=false, font={small}}
+  # Ajuste de tablas para que no se corten
+  - \usepackage{longtable}
+  - \usepackage{booktabs}
 ---

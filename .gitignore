@@ -10,8 +10,8 @@ Thumbs.db
 *.pem
 credentials.*
 
-# Output generado
-tesis/output/
+# Output generado (se sube el PDF para facil acceso)
+# tesis/output/
 
 # Editores
 .vscode/

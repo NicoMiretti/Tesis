@@ -1,6 +1,13 @@
 #!/bin/bash
 # build-pdf.sh - Genera el PDF de la tesis combinando todos los capitulos
 #
+# Formato: Normas APA 7ma edicion
+#   - Times New Roman 12pt
+#   - Doble espaciado
+#   - Margenes 2.54cm (1 pulgada)
+#   - Sangria primera linea 1.27cm
+#   - Running header con titulo abreviado
+#
 # Requisitos:
 #   sudo apt-get install pandoc texlive-latex-recommended texlive-latex-extra \
 #     texlive-fonts-recommended texlive-lang-spanish
@@ -27,14 +34,16 @@ if ! command -v pandoc &> /dev/null; then
     exit 1
 fi
 
-# Buscar capitulos ordenados
-ARCHIVOS=$(find "$CAPITULOS_DIR" -name "*.md" ! -name "README.md" | sort)
+# Buscar capitulos ordenados (por nombre de archivo: 01-xxx, 02-xxx, etc.)
+ARCHIVOS=$(find "$CAPITULOS_DIR" -name "[0-9]*.md" | sort)
 
 if [ -z "$ARCHIVOS" ]; then
     echo "ERROR: No se encontraron capitulos en $CAPITULOS_DIR"
     exit 1
 fi
 
+echo "=== Generador de Tesis (APA 7ma edicion) ==="
+echo ""
 echo "Capitulos encontrados:"
 for f in $ARCHIVOS; do
     echo "  - $(basename "$f")"
@@ -47,12 +56,8 @@ if [ "$1" = "--word" ]; then
     pandoc "$METADATA" $ARCHIVOS \
         -o "$OUTPUT" \
         --toc \
-        --number-sections \
-        --reference-doc="$SCRIPT_DIR/tesis/reference.docx" 2>/dev/null \
-        || pandoc "$METADATA" $ARCHIVOS \
-            -o "$OUTPUT" \
-            --toc \
-            --number-sections
+        --number-sections
+    echo "Listo: $OUTPUT"
 else
     OUTPUT="$OUTPUT_DIR/tesis.pdf"
     echo ""
@@ -63,8 +68,8 @@ else
         --toc \
         --number-sections \
         -V colorlinks=true \
-        -V linkcolor=blue \
-        -V urlcolor=blue
+        -V linkcolor=black \
+        -V urlcolor=blue \
+        -V toccolor=black
+    echo "Listo: $OUTPUT"
 fi
-
-echo "Listo: $OUTPUT"

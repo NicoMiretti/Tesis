@@ -1,4 +1,4 @@
-# Capitulo 2 - Marco Teorico
+# Marco Teorico
 
 Este capitulo presenta los conceptos fundamentales necesarios para comprender las tecnologias, practicas y decisiones que se describen en el resto de la tesis. El objetivo no es ser una referencia exhaustiva de cada herramienta, sino brindar al lector una base solida para entender el proceso de modernizacion y las razones detras de cada eleccion tecnologica.
 
@@ -6,11 +6,11 @@ El capitulo comienza describiendo la infraestructura tradicional (el punto de pa
 
 ---
 
-## 2.1 Infraestructura tradicional
+## Infraestructura tradicional
 
 Antes de hablar de contenedores, Kubernetes o GitOps, es necesario entender como funciona la infraestructura que se busca modernizar. Esta seccion describe los componentes y conceptos del modelo tradicional de TI que la empresa utilizo durante años.
 
-### 2.1.1 Servidores fisicos
+### Servidores fisicos
 
 Un **servidor** es, en esencia, una computadora diseñada para ejecutar aplicaciones y ofrecer servicios a otros sistemas o usuarios. A diferencia de una PC de escritorio, un servidor esta optimizado para funcionar las 24 horas, los 7 dias de la semana, con hardware redundante (fuentes de alimentacion, discos, ventilacion) y mayor capacidad de procesamiento y memoria.
 
@@ -20,7 +20,7 @@ En el modelo tradicional, cada aplicacion se instala directamente sobre el siste
 - **Rigidez**: agregar un nuevo servidor requiere comprarlo, instalarlo fisicamente en el data center, configurar red y sistema operativo. Un proceso que puede llevar semanas o meses.
 - **Acoplamiento**: si el servidor falla, todas las aplicaciones que corren en el caen.
 
-### 2.1.2 Maquinas virtuales
+### Maquinas virtuales
 
 Las **maquinas virtuales (VMs)** surgieron como solucion al problema del desperdicio de recursos. Una VM es una emulacion por software de una computadora completa, con su propio sistema operativo, memoria y almacenamiento virtual, que corre dentro de un servidor fisico.
 
@@ -38,7 +38,7 @@ Un **hipervisor** (como VMware vSphere, Hyper-V o KVM) es el software que permit
 - **Licenciamiento**: cada VM con Windows requiere su propia licencia del sistema operativo.
 - **Portabilidad limitada**: mover una VM de un hipervisor a otro (por ejemplo, de VMware a Hyper-V) no es trivial.
 
-### 2.1.3 Servidores web e IIS
+### Servidores web e IIS
 
 Un **servidor web** es un software que recibe solicitudes de los usuarios (tipicamente a traves del protocolo HTTP/HTTPS desde un navegador) y responde con el contenido solicitado: paginas HTML, datos de una API, archivos, etc. Es el intermediario entre el usuario final y la aplicacion.
 
@@ -85,9 +85,9 @@ Estas limitaciones son manejables con pocas aplicaciones, pero se amplifican a m
 
 ---
 
-## 2.2 Contenedores
+## Contenedores
 
-### 2.2.1 De servidores fisicos a maquinas virtuales a contenedores
+### De servidores fisicos a maquinas virtuales a contenedores
 
 La historia de la infraestructura de TI puede verse como una busqueda progresiva de **mayor eficiencia y aislamiento**:
 
@@ -106,7 +106,7 @@ La diferencia fundamental es lo que se empaqueta:
 | Portabilidad | Limitada al hipervisor | Alta (cualquier runtime compatible) |
 | Densidad | Decenas por servidor | Cientos por servidor |
 
-### 2.2.2 Que es un contenedor
+### Que es un contenedor
 
 Un **contenedor** es una unidad de software que empaqueta el codigo de una aplicacion junto con todas sus dependencias (librerias, runtime, configuracion, archivos necesarios) de manera que pueda ejecutarse de forma **consistente en cualquier entorno**.
 
@@ -118,7 +118,7 @@ Tecnicamente, un contenedor logra este aislamiento usando funcionalidades del ke
 - **Cgroups (Control Groups)**: limitan los recursos (CPU, memoria, disco) que un contenedor puede usar, evitando que una aplicacion consuma todos los recursos del host.
 - **Union File Systems**: permiten construir imagenes en capas reutilizables, reduciendo el espacio en disco y el tiempo de descarga.
 
-### 2.2.3 Docker y el estandar OCI
+### Docker y el estandar OCI
 
 **Docker**, lanzado en 2013, fue la herramienta que popularizo el concepto de contenedores. Antes de Docker, tecnologias como LXC (Linux Containers) ya existian, pero Docker simplifico drasticamente la experiencia del desarrollador al introducir:
 
@@ -175,7 +175,7 @@ Con el crecimiento del ecosistema, surgio la necesidad de estandarizar el format
 
 Esto garantiza que las imagenes construidas con cualquier herramienta compatible con OCI (Docker, Podman, Buildah) puedan ejecutarse en cualquier runtime compatible. En la practica, esto significa que la organizacion no queda atada a Docker como unica herramienta.
 
-### 2.2.4 Contenedores vs IIS: comparacion directa
+### Contenedores vs IIS: comparacion directa
 
 Para sintetizar la diferencia entre el modelo basado en IIS y el modelo basado en contenedores:
 
@@ -196,9 +196,9 @@ Esta tabla resume por que muchas organizaciones estan migrando de plataformas co
 
 ---
 
-## 2.3 Orquestacion de contenedores
+## Orquestacion de contenedores
 
-### 2.3.1 Por que no alcanza con contenedores solos
+### Por que no alcanza con contenedores solos
 
 Los contenedores resuelven el problema de empaquetar y ejecutar una aplicacion de forma consistente. Pero una organizacion no tiene una sola aplicacion: tiene decenas o cientos, cada una con multiples instancias, diferentes necesidades de red, almacenamiento y configuracion.
 
@@ -213,7 +213,7 @@ Gestionar todo esto manualmente se vuelve insostenible rapidamente:
 
 Responder a todas estas preguntas manualmente es exactamente el tipo de trabajo operativo que la modernizacion busca eliminar. Para eso existen los **orquestadores de contenedores**.
 
-### 2.3.2 Kubernetes
+### Kubernetes
 
 **Kubernetes** (frecuentemente abreviado como K8s) es una plataforma de orquestacion de contenedores de codigo abierto, originalmente desarrollada por Google y donada a la **Cloud Native Computing Foundation (CNCF)** en 2015. Nacio de la experiencia interna de Google con sistemas como Borg y Omega, que gestionaban millones de contenedores en sus data centers.
 
@@ -272,7 +272,7 @@ Este modelo es radicalmente diferente al modelo imperativo de IIS, donde el admi
 
 Este modelo declarativo es la base sobre la que se construyen practicas como GitOps e infraestructura como codigo, que se describen mas adelante en este capitulo.
 
-### 2.3.3 Red Hat OpenShift
+### Red Hat OpenShift
 
 **Red Hat OpenShift** es una plataforma de contenedores empresarial construida sobre Kubernetes. Si Kubernetes es el motor, OpenShift es el vehiculo completo: agrega todo lo necesario para que una organizacion pueda operar contenedores en produccion de forma segura y eficiente.
 
@@ -305,11 +305,11 @@ Para una empresa que necesita operar en produccion con garantias de soporte, seg
 
 ---
 
-## 2.4 Modelos de despliegue de infraestructura
+## Modelos de despliegue de infraestructura
 
 La decision sobre **donde** ejecutar la infraestructura es tan importante como la decision de **que** tecnologias usar. Existen tres modelos principales, cada uno con sus ventajas, desventajas y casos de uso.
 
-### 2.4.1 On-premises
+### On-premises
 
 El modelo **on-premises** (literalmente "en las instalaciones") significa que la infraestructura se ejecuta en servidores fisicos ubicados en un data center propio o contratado por la organizacion. La empresa es responsable de todo: hardware, red, almacenamiento, sistema operativo, actualizaciones, seguridad fisica y logica.
 
@@ -327,7 +327,7 @@ Es el modelo que la mayoria de las empresas utilizaron historicamente y el punto
 - **Responsabilidad operativa**: el equipo de TI debe gestionar todo el stack, desde el hardware hasta la plataforma.
 - **Riesgo de obsolescencia**: el hardware se deprecia y requiere renovacion periodica.
 
-### 2.4.2 Cloud publica
+### Cloud publica
 
 En el modelo de **cloud publica**, la infraestructura se ejecuta en servidores de un proveedor externo (como Microsoft Azure, Amazon Web Services o Google Cloud Platform). El proveedor gestiona el hardware, la red y, en muchos casos, parte del software base.
 
@@ -343,7 +343,7 @@ En el modelo de **cloud publica**, la infraestructura se ejecuta en servidores d
 - **Cumplimiento normativo**: para algunas industrias, alojar datos en infraestructura de terceros puede ser problematico.
 - **Latencia variable**: la comunicacion con sistemas internos on-premises introduce latencia adicional.
 
-### 2.4.3 Modelo hibrido
+### Modelo hibrido
 
 El modelo **hibrido** combina infraestructura on-premises con servicios en la nube publica. No es simplemente tener ambos entornos por separado, sino **integrarlos** de forma que las cargas de trabajo puedan distribuirse estrategicamente entre ambos.
 
@@ -373,11 +373,11 @@ ARO permite que una empresa que ya usa OpenShift on-premises extienda su platafo
 
 ---
 
-## 2.5 Conceptos fundamentales de desarrollo y operaciones
+## Conceptos fundamentales de desarrollo y operaciones
 
 Antes de abordar las practicas de entrega de software (CI/CD, GitOps), es necesario comprender algunos conceptos que son transversales a todo el proceso de modernizacion.
 
-### 2.5.1 Control de versiones y Git
+### Control de versiones y Git
 
 Un **sistema de control de versiones** es una herramienta que registra los cambios realizados sobre un conjunto de archivos a lo largo del tiempo. Permite saber **quien** cambio **que**, **cuando** y **por que**, y facilita la colaboracion entre multiples personas trabajando sobre los mismos archivos.
 
@@ -394,7 +394,7 @@ Conceptos clave de Git:
 
 Git no es solo para codigo fuente. En el contexto de esta tesis, Git se utiliza tambien para versionar **infraestructura**: manifiestos de Kubernetes, configuraciones de Argo CD, definiciones de Helm charts. Este uso de Git como fuente de verdad para la infraestructura es la base de **GitOps**, que se describe en la seccion 2.6.2.
 
-### 2.5.2 YAML
+### YAML
 
 **YAML** (acronimo recursivo de "YAML Ain't Markup Language") es un formato de serializacion de datos diseñado para ser facilmente legible por humanos. Es el formato estandar para definir configuraciones en Kubernetes, OpenShift, Ansible, Docker Compose y muchas otras herramientas.
 
@@ -421,7 +421,7 @@ Caracteristicas de YAML:
 
 En el contexto de esta tesis, practicamente toda la configuracion de la plataforma se define en archivos YAML: deployments, services, configuraciones de Argo CD, Helm values, playbooks de Ansible. Cuando en los capitulos siguientes se muestren ejemplos de configuracion, estaran escritos en YAML.
 
-### 2.5.3 Entornos de despliegue
+### Entornos de despliegue
 
 En el desarrollo de software profesional, las aplicaciones no se despliegan directamente en produccion. Se utilizan multiples **entornos** que permiten validar los cambios progresivamente:
 
@@ -432,7 +432,7 @@ En el desarrollo de software profesional, las aplicaciones no se despliegan dire
 
 La existencia de multiples entornos introduce un desafio: **mantener la consistencia entre ellos**. Una aplicacion puede funcionar perfectamente en desarrollo y fallar en produccion si las configuraciones son diferentes. Los contenedores (misma imagen en todos los entornos) y las herramientas de gestion de configuracion (Helm, Kustomize) ayudan a resolver este problema.
 
-### 2.5.4 DevOps
+### DevOps
 
 **DevOps** no es una herramienta ni un producto: es una **cultura y conjunto de practicas** que buscan unificar el desarrollo de software (Dev) y las operaciones de TI (Ops), dos areas que historicamente trabajaron de forma separada y muchas veces en conflicto.
 
@@ -452,7 +452,7 @@ DevOps propone eliminar este silo mediante:
 
 El proceso de modernizacion descrito en esta tesis es, en esencia, la **implementacion practica de una cultura DevOps**: pasar de procesos manuales y equipos aislados a una plataforma compartida con automatizacion, estandarizacion y responsabilidad distribuida.
 
-### 2.5.5 Monolitos y microservicios
+### Monolitos y microservicios
 
 La **arquitectura** de una aplicacion determina como esta organizada internamente y tiene un impacto directo en como se despliega y opera.
 
@@ -472,11 +472,11 @@ En el caso de estudio de esta tesis, la migracion a contenedores no requiere nec
 
 ---
 
-## 2.6 Practicas de entrega de software
+## Practicas de entrega de software
 
 Con los conceptos fundamentales establecidos, esta seccion describe las practicas que transforman la forma en que el software se construye, prueba y despliega.
 
-### 2.6.1 Integracion Continua y Entrega Continua (CI/CD)
+### Integracion Continua y Entrega Continua (CI/CD)
 
 **CI/CD** es un conjunto de practicas que buscan automatizar y acelerar el ciclo de vida de la entrega de software.
 
@@ -505,7 +505,7 @@ Cada etapa puede incluir validaciones que actuan como "puertas" (gates): si las 
 
 Los pipelines pueden implementarse con diversas herramientas: Jenkins, Tekton, GitHub Actions, GitLab CI, Azure DevOps Pipelines, entre otras. La eleccion de la herramienta depende del contexto tecnologico de la organizacion.
 
-### 2.6.2 GitOps
+### GitOps
 
 **GitOps** es un modelo operativo que usa **Git como unica fuente de verdad** para la infraestructura y la configuracion de las aplicaciones. Fue formalizado por Weaveworks en 2017, aunque los principios que lo sustentan existian antes.
 
@@ -553,7 +553,7 @@ Para ilustrar la diferencia, consideremos un cambio de version de una aplicacion
 4. Argo CD detecta el cambio y lo aplica al cluster automaticamente.
 5. Todo queda registrado: quien lo pidio, quien lo aprobo, cuando se aplico.
 
-### 2.6.3 Infraestructura como Codigo (IaC)
+### Infraestructura como Codigo (IaC)
 
 **Infraestructura como Codigo (Infrastructure as Code - IaC)** es la practica de gestionar y aprovisionar infraestructura a traves de archivos de definicion legibles por maquinas, en lugar de procesos manuales o herramientas interactivas.
 
@@ -573,9 +573,9 @@ En el contexto de Kubernetes y OpenShift, IaC se materializa en los **manifiesto
 
 ---
 
-## 2.7 Herramientas clave
+## Herramientas clave
 
-### 2.7.1 Argo CD
+### Argo CD
 
 **Argo CD** es una herramienta de entrega continua declarativa para Kubernetes que implementa los principios de GitOps. Es un proyecto graduado de la CNCF (Cloud Native Computing Foundation) y se ha convertido en el estandar de facto para GitOps en ecosistemas Kubernetes.
 
@@ -607,7 +607,7 @@ Argo CD provee:
 - **CLI (`argocd`)**: herramienta de linea de comandos para gestionar aplicaciones desde la terminal.
 - **API REST y gRPC**: para integracion con otras herramientas y automatizacion.
 
-### 2.7.2 Helm
+### Helm
 
 **Helm** es un gestor de paquetes para Kubernetes, frecuentemente descrito como "el apt/yum de Kubernetes". Permite empaquetar, distribuir y gestionar aplicaciones de Kubernetes como unidades reutilizables llamadas **charts**.
 
@@ -628,14 +628,14 @@ Helm resuelve esto con:
 
 ```
 mi-aplicacion/
-├── Chart.yaml          # Metadatos del chart (nombre, version, descripcion)
-├── values.yaml         # Valores por defecto
-├── templates/          # Manifiestos con templates
-│   ├── deployment.yaml
-│   ├── service.yaml
-│   ├── configmap.yaml
-│   └── ingress.yaml
-└── charts/             # Dependencias (sub-charts)
+|-- Chart.yaml          # Metadatos del chart (nombre, version, descripcion)
+|-- values.yaml         # Valores por defecto
+|-- templates/          # Manifiestos con templates
+|   |-- deployment.yaml
+|   |-- service.yaml
+|   |-- configmap.yaml
+|   |-- ingress.yaml
+|-- charts/             # Dependencias (sub-charts)
 ```
 
 #### Ejemplo conceptual
@@ -674,7 +674,7 @@ image:
 
 Esto permite mantener una unica definicion de la aplicacion (el chart) y variar solo lo que cambia entre entornos (los values). Si se necesita cambiar algo comun a todos los entornos (por ejemplo, agregar un health check), se modifica el template una sola vez.
 
-### 2.7.3 Kustomize
+### Kustomize
 
 **Kustomize** es una herramienta nativa de Kubernetes para personalizar manifiestos YAML **sin usar templates**. A diferencia de Helm, Kustomize trabaja directamente sobre manifiestos YAML validos y los modifica mediante parches y superposiciones.
 
@@ -687,15 +687,15 @@ El modelo de Kustomize se basa en dos conceptos:
 
 ```
 mi-aplicacion/
-├── base/                          # Definicion base (comun a todos)
-│   ├── kustomization.yaml
-│   ├── deployment.yaml
-│   └── service.yaml
-├── overlays/
-│   ├── desarrollo/
-│   │   └── kustomization.yaml    # Modifica replicas=1
-│   └── produccion/
-│       └── kustomization.yaml    # Modifica replicas=3, agrega recursos
+|-- base/                          # Definicion base (comun a todos)
+|   |-- kustomization.yaml
+|   |-- deployment.yaml
+|   |-- service.yaml
+|-- overlays/
+|   |-- desarrollo/
+|   |   |-- kustomization.yaml    # Modifica replicas=1
+|   |-- produccion/
+|       |-- kustomization.yaml    # Modifica replicas=3, agrega recursos
 ```
 
 La ventaja de este enfoque es que los archivos base son YAML valido que se puede aplicar directamente, sin necesidad de un motor de templates. Los overlays solo definen las diferencias.
@@ -715,7 +715,7 @@ Ambas herramientas resuelven el problema de gestionar manifiestos para multiples
 
 En la practica, **Helm y Kustomize no son mutuamente excluyentes**. Muchas organizaciones usan Helm para empaquetar aplicaciones y Kustomize para personalizar los manifiestos resultantes por entorno. Argo CD soporta ambas herramientas de forma nativa.
 
-### 2.7.4 Red Hat Developer Hub
+### Red Hat Developer Hub
 
 **Red Hat Developer Hub** es la distribucion empresarial de **Backstage**, un framework de codigo abierto creado por Spotify para construir portales de desarrollo internos (Internal Developer Portals - IDP).
 
@@ -744,7 +744,7 @@ En el contexto de esta tesis, Developer Hub tiene un rol especifico: **facilitar
 
 Esto transforma el proceso de onboarding de "hablar con el equipo de plataforma y esperar dias" a "usar el portal y tener todo listo en minutos".
 
-### 2.7.5 Ansible
+### Ansible
 
 **Ansible** es una herramienta de automatizacion de TI desarrollada por Red Hat. Se utiliza para gestionar configuraciones, desplegar aplicaciones, orquestar tareas complejas y aprovisionar infraestructura.
 
@@ -789,9 +789,9 @@ Ansible complementa a Argo CD cubriendo el espacio de automatizacion **fuera** d
 
 ---
 
-## 2.8 Patrones de arquitectura
+## Patrones de arquitectura
 
-### 2.8.1 Patron App of Apps
+### Patron App of Apps
 
 El patron **App of Apps** es un patron de gestion declarativa de aplicaciones en Argo CD. Resuelve el problema de escalar GitOps cuando se tienen muchas aplicaciones.
 
@@ -810,11 +810,11 @@ El patron consiste en crear una **Application "raiz"** que, en lugar de apuntar 
 
 ```
 repo-de-apps/
-├── apps/                          # La app raiz apunta aca
-│   ├── app-frontend.yaml          # Application de Argo CD para el frontend
-│   ├── app-backend.yaml           # Application de Argo CD para el backend
-│   ├── app-api.yaml               # Application de Argo CD para la API
-│   └── app-monitoring.yaml        # Application de Argo CD para monitoreo
+|-- apps/                          # La app raiz apunta aca
+|   |-- app-frontend.yaml          # Application de Argo CD para el frontend
+|   |-- app-backend.yaml           # Application de Argo CD para el backend
+|   |-- app-api.yaml               # Application de Argo CD para la API
+|   |-- app-monitoring.yaml        # Application de Argo CD para monitoreo
 ```
 
 Cuando Argo CD sincroniza la app raiz, crea (o actualiza) todas las Applications hijas. Cada Application hija a su vez apunta al repositorio Git correspondiente con los manifiestos de su aplicacion.
@@ -835,7 +835,7 @@ El patron tiene variantes segun la complejidad de la organizacion:
 - **App of Apps por entorno**: una app raiz por entorno (desarrollo, staging, produccion), cada una apuntando a un directorio o branch diferente.
 - **App of Apps jerarquico**: una app raiz que gestiona apps intermedias (por equipo o por area), que a su vez gestionan las apps finales. Util para organizaciones grandes con multiples equipos y clusters.
 
-### 2.8.2 Operadores de Kubernetes
+### Operadores de Kubernetes
 
 Los **Operadores** son un patron de Kubernetes que extiende la plataforma para gestionar aplicaciones complejas de forma automatizada. Encapsulan conocimiento operativo (que normalmente estaria en la cabeza de un administrador experimentado) en software que corre dentro del cluster.
 
@@ -865,7 +865,7 @@ OpenShift hace uso extensivo de operadores:
 
 ---
 
-## 2.9 Resumen del capitulo
+## Resumen del capitulo
 
 Los conceptos presentados en este capitulo forman la base teorica sobre la que se construye el proceso de modernizacion descrito en esta tesis. La siguiente tabla resume cada concepto y su relevancia:
 
