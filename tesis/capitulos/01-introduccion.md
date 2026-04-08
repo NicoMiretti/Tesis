@@ -2,19 +2,23 @@
 
 ## Contexto
 
-En los ultimos años, las organizaciones de tecnologia han enfrentado una presion creciente por acelerar la entrega de software, mejorar la confiabilidad de sus sistemas y reducir los costos operativos asociados a infraestructuras tradicionales. Lo que antes era aceptable, como servidores configurados manualmente, despliegues coordinados por correo electronico y procesos que dependian del conocimiento de unas pocas personas, hoy representa un riesgo operativo y una barrera para la competitividad.
+En los ultimos años, las organizaciones de tecnologia han enfrentado una presion creciente por acelerar la entrega de software, mejorar la confiabilidad de sus sistemas y reducir los costos operativos asociados a infraestructuras tradicionales (Forsgren et al., 2018). Lo que antes era aceptable, como servidores configurados manualmente, despliegues coordinados por correo electronico y procesos que dependian del conocimiento de unas pocas personas, hoy representa un riesgo operativo y una barrera para la competitividad.
 
-La empresa objeto de este trabajo no es ajena a esta realidad. Durante años, su infraestructura de aplicaciones se sustento sobre **Internet Information Services (IIS)** corriendo en servidores **Windows Server on-premises**, con procesos de despliegue en su mayoria manuales y herramientas de CI/CD que fueron quedando obsoletas. Este modelo, si bien funcional en su momento, presentaba limitaciones cada vez mas evidentes: tiempos de despliegue prolongados, falta de estandarizacion entre equipos, dificultad para escalar, y una fuerte dependencia de conocimiento no documentado.
+La empresa objeto de este trabajo no es ajena a esta realidad. Durante años, su infraestructura de aplicaciones se sustento sobre **Internet Information Services (IIS)** corriendo en servidores **Windows Server on-premises**, con procesos de despliegue en su mayoria manuales y herramientas de integracion y entrega continua que fueron quedando obsoletas. Este modelo, si bien funcional en su momento, presentaba limitaciones cada vez mas evidentes: tiempos de despliegue prolongados, falta de estandarizacion entre equipos, dificultad para escalar, y una fuerte dependencia de conocimiento no documentado.
+
+[REQUIERE INPUT DEL AUTOR: Descripcion breve de la empresa (rubro, tamaño aproximado, cantidad de equipos de desarrollo) sin datos que la identifiquen directamente.]
 
 Frente a este escenario, la organizacion inicio un proceso de modernizacion que busca transformar la forma en que se construye, despliega y opera el software. No se trato de un cambio instantaneo ni de una migracion completa a la nube publica, sino de una **transicion progresiva** hacia un modelo hibrido basado en **Red Hat OpenShift** (tanto on-premises como en Azure a traves de **ARO - Azure Red Hat OpenShift**), incorporando practicas de **GitOps**, **infraestructura como codigo** y herramientas modernas de automatizacion.
 
 ## Problema
 
+[REQUIERE INPUT DEL AUTOR: Confirmar o ajustar la siguiente lista de problemas. Son los que se asumen en base a las conversaciones iniciales, pero solo Nicolas puede validar cuales aplican y si falta alguno.]
+
 El modelo de infraestructura tradicional de la empresa presentaba una serie de problemas que impactaban tanto en la operacion diaria como en la capacidad de evolucion tecnologica:
 
-- **Deploys manuales y propensos a error**: los despliegues en IIS requerian intervenciones manuales, lo que incrementaba el riesgo de errores humanos y hacia que cada puesta en produccion fuera un evento de alto estres.
+- **Despliegues manuales y propensos a error**: los despliegues en IIS requerian intervenciones manuales, lo que incrementaba el riesgo de errores humanos y hacia que cada puesta en produccion fuera un evento de alto estres.
 - **Falta de estandarizacion**: cada equipo o aplicacion podia tener un proceso de despliegue diferente, dificultando la operacion, el soporte y la incorporacion de nuevos miembros.
-- **Herramientas de CI/CD obsoletas**: las herramientas existentes no se adaptaban a las necesidades actuales ni permitian implementar practicas modernas de entrega continua.
+- **Herramientas de CI/CD obsoletas**: las herramientas existentes no se adaptaban a las necesidades actuales ni permitian implementar practicas modernas de entrega continua. [REQUIERE INPUT DEL AUTOR: Indicar que herramientas de CI/CD se usaban antes, si se pueden mencionar.]
 - **Conocimiento concentrado**: los procedimientos dependian del conocimiento de pocas personas, generando cuellos de botella y riesgo ante rotacion de personal.
 - **Escalabilidad limitada**: escalar aplicaciones o incorporar nuevos equipos a la plataforma era un proceso lento y costoso.
 - **Sin versionado de la infraestructura**: no existia un registro claro de que estaba desplegado, en que version, ni como reproducir un entorno.
@@ -37,17 +41,19 @@ Documentar y analizar el proceso de modernizacion de la infraestructura de entre
 
 ## Alcance
 
-Esta tesis cubre los siguientes aspectos:
+La presente tesis cubre los siguientes aspectos:
 
 **Dentro del alcance:**
+
 - El proceso de adopcion de Red Hat OpenShift como plataforma de contenedores (on-premises y ARO).
 - La evolucion de los procesos de despliegue: desde comandos manuales, pasando por scripts, pipelines, hasta GitOps con Argo CD.
-- La implementacion de infraestructura como codigo con Helm y Kustomize.
+- La implementacion de infraestructura como codigo con Helm y Kustomize. [PENDIENTE: Helm no esta completamente implementado al momento de escritura; se documenta el objetivo y el avance.]
 - La adopcion del patron App of Apps para la gestion declarativa de aplicaciones.
-- La incorporacion de herramientas complementarias: Red Hat Developer Hub y Ansible.
+- La incorporacion planificada de herramientas complementarias: Red Hat Developer Hub y Ansible.
 - El impacto organizacional del cambio en los equipos de desarrollo y operaciones.
 
 **Fuera del alcance:**
+
 - La modernizacion de herramientas de scheduling (Control-M).
 - La migracion de aplicaciones Java legacy.
 - Los procesos de RPA.
