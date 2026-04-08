@@ -62,9 +62,9 @@ Existen tres modelos principales para ubicar la infraestructura:
 
 - **On-premises**: servidores en un data center propio. Control total pero inversion de capital alta, escalabilidad limitada y responsabilidad operativa completa.
 - **Cloud publica**: infraestructura de un proveedor externo (Azure, AWS, GCP). Elasticidad y modelo de gasto operativo (OpEx), pero con riesgo de dependencia del proveedor (vendor lock-in) y costos potencialmente mayores a largo plazo.
-- **Hibrido**: combina ambos, distribuyendo cargas de trabajo estrategicamente. Es el modelo adoptado en esta tesis: OpenShift on-premises para cargas principales y **ARO (Azure Red Hat OpenShift)** para cargas especificas en Azure.
+- **Hibrido**: combina ambos, distribuyendo cargas de trabajo estrategicamente. Es el modelo adoptado en esta tesis: OpenShift on-premises como plataforma principal para las aplicaciones de la empresa, y **ARO (Azure Red Hat OpenShift)** para soluciones empaquetadas y servicios gestionados que se benefician de un entorno en la nube (por ejemplo, herramientas de gestion de identidad).
 
-**ARO** es un servicio gestionado conjuntamente por Microsoft y Red Hat, donde ambos administran el plano de control del cluster, permitiendo que la empresa se enfoque en sus aplicaciones (Microsoft, 2024c). Un manifiesto que funciona en OpenShift on-premises funciona igual en ARO, lo que facilita la consistencia en un modelo hibrido.
+**ARO** es un servicio gestionado conjuntamente por Microsoft y Red Hat, donde ambos administran el plano de control del cluster, permitiendo que la empresa se enfoque en la configuracion del servicio sin gestionar la infraestructura subyacente (Microsoft, 2024c). Un manifiesto que funciona en OpenShift on-premises funciona igual en ARO, lo que facilita la consistencia.
 
 ---
 

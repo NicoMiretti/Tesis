@@ -8,7 +8,7 @@ La empresa objeto de este trabajo no es ajena a esta realidad. Durante años, su
 
 [REQUIERE INPUT DEL AUTOR: Descripcion breve de la empresa (rubro, tamaño aproximado, cantidad de equipos de desarrollo) sin datos que la identifiquen directamente.]
 
-Frente a este escenario, la organizacion inicio un proceso de modernizacion que busca transformar la forma en que se construye, despliega y opera el software. No se trato de un cambio instantaneo ni de una migracion completa a la nube publica, sino de una **transicion progresiva** hacia un modelo hibrido basado en **Red Hat OpenShift** (tanto on-premises como en Azure a traves de **ARO - Azure Red Hat OpenShift**), incorporando practicas de **GitOps**, **infraestructura como codigo** y herramientas modernas de automatizacion.
+Frente a este escenario, la organizacion inicio un proceso de modernizacion que busca transformar la forma en que se construye, despliega y opera el software. No se trato de un cambio instantaneo ni de una migracion a la nube publica, sino de una **transicion progresiva** hacia una plataforma basada en **Red Hat OpenShift on-premises**, incorporando practicas de **GitOps**, **infraestructura como codigo** y herramientas modernas de automatizacion. Complementariamente, se utiliza **ARO (Azure Red Hat OpenShift)** para soluciones empaquetadas y servicios especificos que se benefician de un entorno gestionado en la nube.
 
 ## Problema
 
@@ -23,7 +23,7 @@ El modelo de infraestructura tradicional de la empresa presentaba una serie de p
 - **Escalabilidad limitada**: escalar aplicaciones o incorporar nuevos equipos a la plataforma era un proceso lento y costoso.
 - **Sin versionado de la infraestructura**: no existia un registro claro de que estaba desplegado, en que version, ni como reproducir un entorno.
 
-Estos problemas no eran exclusivos del area de aplicaciones web. La empresa tambien operaba herramientas como **Control-M** para scheduling de procesos batch, **aplicaciones Java legacy** y **procesos de RPA (Robotic Process Automation)**, todos en proceso de evaluacion o modernizacion. Sin embargo, el alcance de esta tesis se centra en el eje principal de la transformacion: **la plataforma de contenedores y el modelo de entrega de software**.
+Cabe aclarar que el ecosistema tecnologico de la empresa no se limita a IIS. La organizacion tambien opera aplicaciones Java, sistemas ECM (Enterprise Content Management), bases de datos SQL Server, soluciones SAP, y herramientas de scheduling como Control-M para procesos batch en el area de operaciones. Sin embargo, el alcance de esta tesis se centra en el eje principal de la transformacion: **la migracion de las aplicaciones en IIS hacia una plataforma basada en contenedores y un modelo moderno de entrega de software**.
 
 ## Objetivos
 
@@ -45,7 +45,8 @@ La presente tesis cubre los siguientes aspectos:
 
 **Dentro del alcance:**
 
-- El proceso de adopcion de Red Hat OpenShift como plataforma de contenedores (on-premises y ARO).
+- El proceso de adopcion de Red Hat OpenShift on-premises como plataforma de contenedores para reemplazar IIS.
+- El uso complementario de ARO (Azure Red Hat OpenShift) para soluciones empaquetadas (por ejemplo, Keycloak para gestion de identidad).
 - La evolucion de los procesos de despliegue: desde comandos manuales, pasando por scripts, pipelines, hasta GitOps con Argo CD.
 - La implementacion de infraestructura como codigo con Helm y Kustomize. [PENDIENTE: Helm no esta completamente implementado al momento de escritura; se documenta el objetivo y el avance.]
 - La adopcion del patron App of Apps para la gestion declarativa de aplicaciones.
@@ -54,9 +55,7 @@ La presente tesis cubre los siguientes aspectos:
 
 **Fuera del alcance:**
 
-- La modernizacion de herramientas de scheduling (Control-M).
-- La migracion de aplicaciones Java legacy.
-- Los procesos de RPA.
+- La modernizacion de otras tecnologias de la empresa (Java, ECM, SAP, SQL Server, Control-M).
 - Detalles de la arquitectura interna de las aplicaciones (microservicios, codigo fuente, etc.).
 - Aspectos comerciales o financieros de la transformacion.
 
