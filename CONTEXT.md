@@ -1,6 +1,8 @@
-# CONTEXT.md - Guia de Contexto y Reglas
+# CONTEXT.md - Guia de Contexto para IA
 
-> Este archivo sirve como punto de entrada para cualquier IA o persona que necesite entender este repositorio. OpenCode lo carga automaticamente como instrucciones.
+> Este archivo sirve como punto de entrada y conjunto de reglas para cualquier IA que trabaje con este repositorio. **Leer este archivo completo antes de hacer cualquier otra cosa.**
+
+---
 
 ## Que es este repositorio
 
@@ -29,86 +31,153 @@ Cada etapa se contrasta con un "antes vs despues".
 - **Antes**: IIS, Windows Server, deploys manuales, herramientas CI/CD legacy.
 - **Despues**: Red Hat OpenShift (on-prem) + ARO (Azure), Argo CD, Helm/Kustomize, Red Hat Developer Hub, Ansible.
 
-## Reglas de Escritura
+## Estructura del Repositorio
 
-### Fuentes y Bibliografia
-- Todo dato tecnico, definicion o afirmacion que no sea conocimiento general debe tener una fuente verificable.
-- Registrar cada fuente usada en `fuentes/referencias.md` en formato APA 7ma edicion.
-- Al buscar informacion para escribir, anotar la URL o referencia bibliografica inmediatamente.
-- Preferir fuentes oficiales (documentacion de Red Hat, CNCF, Microsoft) sobre blogs o articulos de terceros.
+```
+Tesis/
+|-- README.md              # Vision general de la tesis
+|-- CONTEXT.md             # ESTE ARCHIVO - Contexto y reglas para IA
+|-- build-pdf.sh           # Script para generar PDF/Word con Pandoc
+|-- .gitignore
+|
+|-- docs/                  # Documentacion de referencia
+|   |-- internas/          # Docs de la empresa (sanitizadas)
+|   |-- externas/          # Docs publicas de tecnologias
+|   |-- diagramas/         # Arquitectura, flujos, capturas
+|
+|-- fuentes/               # Material bibliografico
+|   |-- libros/
+|   |-- papers/
+|   |-- articulos/
+|   |-- referencias.md     # Registro de todas las fuentes citadas (APA 7ma)
+|
+|-- tesis/                 # El documento de la tesis
+|   |-- metadata.yaml      # Config de Pandoc (APA, fuente, margenes)
+|   |-- capitulos/         # Cada capitulo en .md separado
+|   |-- assets/            # Imagenes y recursos del documento
+|   |-- output/            # PDF generado (tesis.pdf)
+|
+|-- ejemplos/              # Codigo y configuraciones reales (sanitizados)
+    |-- antes/             # Como se hacia antes (scripts, configs IIS)
+    |-- despues/           # Como se hace ahora (Helm, ArgoCD, Ansible)
+```
 
-### Veracidad
-- No inventar datos tecnicos, estadisticas ni afirmaciones.
-- Si falta informacion, marcar con `[PENDIENTE: descripcion de lo que falta]` en el texto.
-- Si un dato no puede verificarse, indicarlo explicitamente.
+---
 
-### Sanitizacion
-- Nunca usar IPs reales, dominios internos, credenciales, nombres de clientes ni datos que identifiquen la empresa.
-- En ejemplos de codigo y configuracion, usar valores ficticios obvios (ejemplo: `mi-app.ejemplo.com`, `10.0.0.x`).
+## REGLAS DE ESCRITURA (OBLIGATORIAS)
 
-### Tono y Estilo
-- Tercera persona, español formal academico.
+Estas reglas aplican siempre que se escriba o modifique contenido de la tesis. Son de cumplimiento obligatorio.
+
+### 1. Fuentes y bibliografia
+
+- **Todo dato tecnico, definicion o afirmacion que no sea conocimiento general debe tener una fuente citada.**
+- Registrar cada fuente utilizada en `fuentes/referencias.md` en formato **APA 7ma edicion**.
+- Si se busca informacion en internet para escribir un parrafo, registrar la fuente inmediatamente.
+- Preferir fuentes oficiales (documentacion de Red Hat, CNCF, Kubernetes, etc.) sobre blogs o articulos de opinion.
+- Incluir: autor, año, titulo, URL y fecha de acceso para fuentes web.
+
+### 2. No inventar datos
+
+- **Si no hay informacion suficiente, NO inventar.** Marcar con `[PENDIENTE: descripcion de lo que falta]`.
+- No asumir datos de la empresa (cantidades de servidores, aplicaciones, equipos, fechas, metricas, etc.).
+- **Preguntar a Nicolas** antes de escribir cualquier dato especifico de la empresa. El es quien conoce la empresa, sus procesos y su historia. No adivinar.
+
+### 3. Secciones que requieren input del autor
+
+- Hay parrafos y secciones que **solo Nicolas puede redactar** porque requieren conocimiento directo de la empresa, decisiones internas o experiencias especificas.
+- Cuando una seccion necesite el criterio o conocimiento del autor, marcarla con `[REQUIERE INPUT DEL AUTOR: descripcion de lo que se necesita]`.
+- No marcar todo: solo lo **sumamente necesario** que requiera el criterio de Nicolas. Lo que pueda escribirse con informacion publica o tecnica general, escribirlo directamente.
+- Ejemplos de lo que SI requiere input del autor:
+  - Datos especificos de la empresa (cantidad de apps, estructura de equipos, decisiones politicas).
+  - Motivaciones internas para elegir una tecnologia sobre otra.
+  - Problemas concretos que ocurrieron durante la implementacion.
+  - Metricas o resultados reales.
+- Ejemplos de lo que NO requiere input del autor:
+  - Definiciones de tecnologias (Kubernetes, ArgoCD, etc.).
+  - Comparativas tecnicas basadas en documentacion publica.
+  - Buenas practicas de la industria.
+
+### 4. Sanitizacion
+
+- **Nunca** incluir IPs reales, dominios internos, credenciales, nombres de clientes, nombres de productos internos ni datos que identifiquen la empresa.
+- En ejemplos de codigo o configuracion, usar valores ficticios evidentes (ej: `app.ejemplo.com`, `10.0.0.x`, `mi-aplicacion`).
+- Si Nicolas provee datos reales, sanitizarlos antes de escribir.
+
+### 5. Tono y estilo
+
+- **Tercera persona**, español formal academico.
 - Tecnico pero accesible: el lector puede no ser experto en infraestructura.
 - Sin jerga innecesaria, sin humor, sin emojis.
-- Oraciones claras y directas. Evitar parrafos de mas de 5-6 lineas.
+- Evitar frases grandilocuentes o de marketing ("revolucionario", "game-changer", etc.).
+- Ser directo y preciso.
 
-### Consistencia Terminologica
-- Usar siempre los mismos terminos en español. Terminos tecnicos en ingles solo cuando no hay traduccion estandar aceptada.
-- Ejemplos: usar "contenedor" (no alternar con "container"), "despliegue" (no "deploy" salvo en contexto de comandos), "cluster" (no "cluster" sin acento en texto corrido).
-- Mantener un glosario implicito: si se define un termino de una manera, usarlo igual en todo el documento.
+### 6. Consistencia terminologica
 
-### Implementaciones No Completadas
-- Si algo todavia no esta implementado en la empresa (ej: Helm charts), escribir en futuro o condicional.
-- No afirmar que algo existe o funciona si no esta confirmado por el autor.
-- Distinguir claramente entre "lo que se hizo", "lo que se esta haciendo" y "lo que se planea hacer".
+- Usar siempre los mismos terminos a lo largo de toda la tesis. No alternar.
+- Terminos tecnicos en ingles solo cuando no hay traduccion estandar aceptada.
+- Glosario de terminos a mantener:
+  - "contenedor" (no "container")
+  - "despliegue" (no "deploy" en el texto corrido, salvo en contexto tecnico/comandos)
+  - "orquestacion" (no "orchestration")
+  - "infraestructura como codigo" (no "IaC" sin haberlo definido antes)
+  - Nombres propios en ingles: Kubernetes, OpenShift, Argo CD, Helm, Ansible, Developer Hub (no traducir)
 
-### Secciones Incompletas
-- Usar `[TODO: descripcion]` para secciones que necesitan mas desarrollo o input del autor.
-- Esto permite buscar rapidamente que falta con un grep de `[TODO`.
+### 7. Secciones incompletas
 
-### Formato y Generacion
-- Formato APA 7ma edicion (configurado en `tesis/metadata.yaml`).
-- Cada capitulo en un archivo `.md` separado en `tesis/capitulos/`, nombrado con prefijo numerico (`01-`, `02-`, etc.).
-- La numeracion de secciones es automatica (Pandoc `numbersections`). No agregar numeros manuales en los headers.
-- No usar caracteres unicode especiales en bloques de codigo (usar `|--` en lugar de `├──` para arboles de directorio).
-- Despues de cambios significativos, regenerar el PDF con `./build-pdf.sh` y subirlo a Git.
+- Usar `[TODO: descripcion]` para secciones que necesitan mas desarrollo pero no requieren input del autor.
+- Usar `[PENDIENTE: descripcion]` para datos que faltan verificar.
+- Usar `[REQUIERE INPUT DEL AUTOR: descripcion]` para lo que solo Nicolas puede aportar.
 
-## Comandos Utiles
+### 8. No asumir implementaciones
 
-```bash
-./build-pdf.sh          # Genera tesis/output/tesis.pdf
-./build-pdf.sh --word   # Genera tesis/output/tesis.docx
-```
+- Si algo **todavia no esta implementado** en la empresa (ej: Helm, Developer Hub), escribir en futuro o condicional ("se plantea implementar", "el objetivo es").
+- **No afirmar que algo existe o funciona** si no esta confirmado por Nicolas.
+- Preguntar ante la duda.
 
-## Estructura del Repositorio
-```
-tesis/capitulos/   - Capitulos en .md (el contenido principal)
-tesis/output/      - PDF generado
-docs/internas/     - Documentacion de la empresa (sanitizada)
-docs/externas/     - Documentacion publica de tecnologias
-docs/diagramas/    - Diagramas y capturas
-fuentes/           - Material bibliografico y referencias.md
-ejemplos/antes/    - Como se hacia antes (IIS, scripts)
-ejemplos/despues/  - Como se hace ahora (Helm, ArgoCD, Ansible)
-```
+### 9. Formato y generacion
+
+- Normas **APA 7ma edicion** (configurado en `tesis/metadata.yaml`).
+- Cada capitulo en archivo separado en `tesis/capitulos/` con prefijo numerico (`01-`, `02-`, etc.).
+- No poner numeracion manual en los headers (Pandoc la genera automaticamente con `numbersections`).
+- Despues de cambios significativos en capitulos, regenerar el PDF con `./build-pdf.sh` y subir a Git.
+- No usar caracteres Unicode especiales en bloques de codigo (|-- en lugar de las flechitas de arbol).
+
+### 10. Git
+
+- Commits descriptivos en español que reflejen el cambio realizado.
+- No commitear archivos sensibles (.env, credenciales, etc.).
+- Subir el PDF generado a `tesis/output/` para facil acceso desde GitHub.
+
+---
 
 ## Instrucciones para IA
 
-1. **Lee este archivo primero** para entender el contexto y las reglas.
-2. **Revisa `tesis/capitulos/`** para ver el estado actual del documento.
-3. **Consulta `docs/`** para documentacion de soporte.
-4. **Mira `ejemplos/`** para entender los aspectos tecnicos con codigo real.
+Si sos una IA trabajando con este repo:
+
+1. **Lee este archivo completo primero.** Las reglas de escritura son obligatorias.
+2. **Lee el README.md** para la vision general de la tesis.
+3. **Revisa `tesis/capitulos/`** para ver el estado actual del documento.
+4. **Consulta `fuentes/referencias.md`** para las fuentes ya registradas.
+5. **Consulta `docs/`** para documentacion de soporte.
+6. **Mira `ejemplos/`** para entender los aspectos tecnicos con codigo real.
+7. **Cuando no sepas algo de la empresa, PREGUNTA.** No inventes. Nicolas es la fuente de verdad para datos internos.
+8. **Registra cada fuente que uses** en `fuentes/referencias.md`.
+9. **Regenera el PDF** despues de modificar capitulos y subilo a Git.
+
+---
 
 ## Estado Actual
 
 - [x] Estructura del repo creada
 - [x] Idea general definida (README.md)
-- [x] Capitulo 1 (Introduccion) - borrador
-- [x] Capitulo 2 (Marco Teorico) - borrador
-- [ ] Capitulo 3 (Situacion Inicial) - pendiente
-- [ ] Capitulo 4 (Proceso de Modernizacion) - pendiente
-- [ ] Capitulo 5 (Arquitectura Actual) - pendiente
-- [ ] Capitulo 6 (Resultados) - pendiente
-- [ ] Capitulo 7 (Conclusiones) - pendiente
+- [x] CONTEXT.md con reglas de escritura
+- [x] Capitulo 1 - Introduccion (borrador)
+- [x] Capitulo 2 - Marco Teorico (borrador conciso)
+- [ ] Capitulo 3 - Situacion Inicial
+- [ ] Capitulo 4 - Proceso de Modernizacion
+- [ ] Capitulo 5 - Arquitectura Actual
+- [ ] Capitulo 6 - Resultados y Analisis
+- [ ] Capitulo 7 - Conclusiones
 - [ ] Documentacion interna: pendiente de carga
 - [ ] Ejemplos tecnicos: pendientes de carga
+- [ ] fuentes/referencias.md: pendiente de creacion
