@@ -23,7 +23,9 @@ El modelo de infraestructura tradicional de la empresa presentaba una serie de p
 - **Escalabilidad limitada**: escalar aplicaciones o incorporar nuevos equipos a la plataforma era un proceso lento y costoso.
 - **Sin versionado de la infraestructura**: no existia un registro claro de que estaba desplegado, en que version, ni como reproducir un entorno.
 
-Cabe aclarar que el ecosistema tecnologico de la empresa no se limita a IIS. La organizacion tambien opera aplicaciones Java, sistemas ECM (Enterprise Content Management), bases de datos SQL Server, soluciones SAP, y herramientas de scheduling como Control-M para procesos batch en el area de operaciones. Sin embargo, el alcance de esta tesis se centra en el eje principal de la transformacion: **la migracion de las aplicaciones en IIS hacia una plataforma basada en contenedores y un modelo moderno de entrega de software**.
+Cabe aclarar que el ecosistema tecnologico de la empresa no se limita a IIS. La organizacion tambien gestiona otras plataformas como Java, ECM (Enterprise Content Management), SQL Server y SAP, ademas de herramientas de scheduling como Control-M para procesos batch en el area de operaciones. Sin embargo, el alcance de esta tesis se centra en el eje principal de la transformacion: **la migracion de las aplicaciones desplegadas en IIS hacia una plataforma basada en contenedores y un modelo moderno de entrega de software**.
+
+Este proceso de modernizacion no solo implico cambios tecnologicos sino tambien organizacionales. El equipo de administracion de plataformas, del cual el autor forma parte, fue el impulsor de la transformacion. A partir de este proceso surgieron nuevos roles que antes no existian en la empresa, como **Ingeniero de Plataformas** y **DevOps**, reflejando la evolucion en la forma de operar y entregar software.
 
 ## Objetivos
 
@@ -51,11 +53,11 @@ La presente tesis cubre los siguientes aspectos:
 - La implementacion de infraestructura como codigo con Helm y Kustomize. [PENDIENTE: Helm no esta completamente implementado al momento de escritura; se documenta el objetivo y el avance.]
 - La adopcion del patron App of Apps para la gestion declarativa de aplicaciones.
 - La incorporacion planificada de herramientas complementarias: Red Hat Developer Hub y Ansible.
-- El impacto organizacional del cambio en los equipos de desarrollo y operaciones.
+- El impacto organizacional del cambio: nuevos roles (Ingeniero de Plataformas, DevOps), nuevas dinamicas en los equipos.
 
 **Fuera del alcance:**
 
-- La modernizacion de otras tecnologias de la empresa (Java, ECM, SAP, SQL Server, Control-M).
+- La modernizacion de otras plataformas de la empresa (Java, ECM, SAP, SQL Server, Control-M).
 - Detalles de la arquitectura interna de las aplicaciones (microservicios, codigo fuente, etc.).
 - Aspectos comerciales o financieros de la transformacion.
 
