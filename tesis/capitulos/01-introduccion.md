@@ -25,7 +25,7 @@ El modelo de infraestructura tradicional de la empresa presentaba una serie de p
 
 Cabe aclarar que el ecosistema tecnologico de la empresa no se limita a IIS. La organizacion tambien gestiona otras plataformas como Java, ECM (Enterprise Content Management), SQL Server y SAP, ademas de herramientas de scheduling como Control-M para procesos batch en el area de operaciones. Sin embargo, el alcance de esta tesis se centra en el eje principal de la transformacion: **la migracion de las aplicaciones desplegadas en IIS hacia una plataforma basada en contenedores y un modelo moderno de entrega de software**.
 
-Este proceso de modernizacion no solo implico cambios tecnologicos sino tambien organizacionales. El equipo de administracion de plataformas, del cual el autor forma parte, fue el impulsor de la transformacion. A partir de este proceso surgieron nuevos roles que antes no existian en la empresa, como **Ingeniero de Plataformas** y **DevOps**, reflejando la evolucion en la forma de operar y entregar software.
+Este proceso de modernizacion no solo implico cambios tecnologicos sino tambien organizacionales. El equipo de administracion de plataformas, del cual el autor forma parte, fue el impulsor de la transformacion. A partir de este proceso surgieron nuevos roles que antes no existian en la empresa, como **Ingeniero de Plataformas** y **DevOps**, reflejando la evolucion en la forma de operar y entregar software. [REQUIERE INPUT DEL AUTOR: Confirmar si la descripcion del equipo y los roles es correcta. Agregar contexto si corresponde: cuando surgieron estos roles, si hubo otros cambios organizacionales relevantes.]
 
 ## Objetivos
 
