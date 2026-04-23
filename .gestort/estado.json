@@ -1,0 +1,700 @@
+{
+  "version": 2,
+  "archivos": {
+    "tesis/capitulos/01-introduccion.md": {
+      "parrafos": {
+        "1dddc87a5b48": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.470Z",
+          "lastSeenHash": "1dddc87a5b48"
+        },
+        "ee4a4f1ab1a9": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.470Z",
+          "lastSeenHash": "ee4a4f1ab1a9"
+        },
+        "baee6703faca": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.470Z",
+          "lastSeenHash": "baee6703faca"
+        },
+        "d3f27571c741": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.470Z",
+          "lastSeenHash": "d3f27571c741"
+        },
+        "359623274a50": {
+          "estado": "en_redaccion",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:56.976Z",
+          "lastSeenHash": "359623274a50",
+          "finalText": "[REQUIERE INPUT DEL AUTOR: Descripcion breve de la empresa modificado desde GestorT (rubro, tamaño aproximado, cantidad de equipos de desarrollo) sin datos que la identifiquen directamente.]"
+        },
+        "6bf0f9c2a4fe": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.470Z",
+          "lastSeenHash": "6bf0f9c2a4fe"
+        },
+        "7eeddb57ec0f": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.470Z",
+          "lastSeenHash": "7eeddb57ec0f"
+        },
+        "38963dfc063b": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.470Z",
+          "lastSeenHash": "38963dfc063b"
+        },
+        "ec58032587af": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.470Z",
+          "lastSeenHash": "ec58032587af"
+        },
+        "978737b3f0da": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.470Z",
+          "lastSeenHash": "978737b3f0da"
+        },
+        "8c8c44087adc": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.470Z",
+          "lastSeenHash": "8c8c44087adc"
+        },
+        "0cca9972e856": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.470Z",
+          "lastSeenHash": "0cca9972e856"
+        },
+        "8f12b9a3f0ca": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.470Z",
+          "lastSeenHash": "8f12b9a3f0ca"
+        },
+        "c1906877f75a": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.470Z",
+          "lastSeenHash": "c1906877f75a"
+        },
+        "35790afb2744": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.470Z",
+          "lastSeenHash": "35790afb2744"
+        },
+        "09df10c840ce": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.470Z",
+          "lastSeenHash": "09df10c840ce"
+        },
+        "47e7e5523ef5": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.470Z",
+          "lastSeenHash": "47e7e5523ef5"
+        },
+        "f42097cb706c": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.470Z",
+          "lastSeenHash": "f42097cb706c"
+        },
+        "af6f62a6ea85": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.470Z",
+          "lastSeenHash": "af6f62a6ea85"
+        },
+        "46c3384bdfcb": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.470Z",
+          "lastSeenHash": "46c3384bdfcb"
+        },
+        "12c7bbce4a45": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.470Z",
+          "lastSeenHash": "12c7bbce4a45"
+        },
+        "bc539d55f87e": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.470Z",
+          "lastSeenHash": "bc539d55f87e"
+        },
+        "bb039a91e7b7": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.470Z",
+          "lastSeenHash": "bb039a91e7b7"
+        },
+        "2e7d6b4282d3": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.470Z",
+          "lastSeenHash": "2e7d6b4282d3"
+        },
+        "78a50d74280b": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.470Z",
+          "lastSeenHash": "78a50d74280b"
+        },
+        "d9eb47938a8f": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.470Z",
+          "lastSeenHash": "d9eb47938a8f"
+        },
+        "8a8696c3375a": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.470Z",
+          "lastSeenHash": "8a8696c3375a"
+        },
+        "d5da8d63ba35": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.470Z",
+          "lastSeenHash": "d5da8d63ba35"
+        },
+        "2e565dc1c34b": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.470Z",
+          "lastSeenHash": "2e565dc1c34b"
+        },
+        "079bef2c24cf": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.470Z",
+          "lastSeenHash": "079bef2c24cf"
+        }
+      },
+      "archivados": []
+    },
+    "tesis/capitulos/02-marco-teorico.md": {
+      "parrafos": {
+        "9266444456c3": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "9266444456c3"
+        },
+        "2dbada98b027": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "2dbada98b027"
+        },
+        "58b63e273b96": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "58b63e273b96"
+        },
+        "b9bd02eef091": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "b9bd02eef091"
+        },
+        "b2649b3d8697": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "b2649b3d8697"
+        },
+        "132dd160ce6a": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "132dd160ce6a"
+        },
+        "4b382c196540": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "4b382c196540"
+        },
+        "ba18d5bfe043": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "ba18d5bfe043"
+        },
+        "14597ff435e5": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "14597ff435e5"
+        },
+        "ebd932ef370f": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "ebd932ef370f"
+        },
+        "66abd5131a77": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "66abd5131a77"
+        },
+        "58b63e273b96-2": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "58b63e273b96-2"
+        },
+        "cde7de3f90fc": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "cde7de3f90fc"
+        },
+        "5d775fa7c5ad": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "5d775fa7c5ad"
+        },
+        "381cc330261b": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "381cc330261b"
+        },
+        "a08c76fc7524": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "a08c76fc7524"
+        },
+        "d73a923ae223": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "d73a923ae223"
+        },
+        "795bbd2a2840": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "795bbd2a2840"
+        },
+        "58b63e273b96-3": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "58b63e273b96-3"
+        },
+        "747f5e46fd4b": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "747f5e46fd4b"
+        },
+        "1b8d747d06ee": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "1b8d747d06ee"
+        },
+        "51cb4cbdac5d": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "51cb4cbdac5d"
+        },
+        "44b659795849": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "44b659795849"
+        },
+        "aed83bfce2a0": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "aed83bfce2a0"
+        },
+        "89aae3ab3776": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "89aae3ab3776"
+        },
+        "4df70ee8d278": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "4df70ee8d278"
+        },
+        "19658e5afbe2": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "19658e5afbe2"
+        },
+        "51a10d22887b": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "51a10d22887b"
+        },
+        "58b63e273b96-4": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "58b63e273b96-4"
+        },
+        "7e2f1427ef3f": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "7e2f1427ef3f"
+        },
+        "ce0cff63a55d": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "ce0cff63a55d"
+        },
+        "662399a57a75": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "662399a57a75"
+        },
+        "b8e38a2cd6d1": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "b8e38a2cd6d1"
+        },
+        "58b63e273b96-5": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "58b63e273b96-5"
+        },
+        "ea4aec476b81": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "ea4aec476b81"
+        },
+        "b5d8f717c227": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "b5d8f717c227"
+        },
+        "cccb4fea3d6f": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "cccb4fea3d6f"
+        },
+        "04fbaf2f4e70": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "04fbaf2f4e70"
+        },
+        "aee499a22d99": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "aee499a22d99"
+        },
+        "c7f3a51b1336": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "c7f3a51b1336"
+        },
+        "d15ef2a7b72d": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "d15ef2a7b72d"
+        },
+        "70a04c994675": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "70a04c994675"
+        },
+        "c8cd08d1a2e8": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "c8cd08d1a2e8"
+        },
+        "e0414aa3522f": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "e0414aa3522f"
+        },
+        "b71a969f977e": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "b71a969f977e"
+        },
+        "be0a3ed2bf9a": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "be0a3ed2bf9a"
+        },
+        "58b63e273b96-6": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "58b63e273b96-6"
+        },
+        "52596a3ff06d": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "52596a3ff06d"
+        },
+        "215727e2da44": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "215727e2da44"
+        },
+        "9cdb27b01f6a": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "9cdb27b01f6a"
+        },
+        "15dd954d35af": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "15dd954d35af"
+        },
+        "8789b56e9213": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "8789b56e9213"
+        },
+        "cc54429f5db9": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "cc54429f5db9"
+        },
+        "57801f5de556": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "57801f5de556"
+        },
+        "2b346e3c23ad": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "2b346e3c23ad"
+        },
+        "58b63e273b96-7": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "58b63e273b96-7"
+        },
+        "094b35838b83": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "094b35838b83"
+        },
+        "d00cedf8ce9d": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "d00cedf8ce9d"
+        },
+        "70586b769fb7": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "70586b769fb7"
+        },
+        "37016dc61a66": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "37016dc61a66"
+        },
+        "d4ea209ff531": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "d4ea209ff531"
+        },
+        "02cbfea845d3": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "02cbfea845d3"
+        },
+        "2d601c534223": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "2d601c534223"
+        },
+        "02ec7c205841": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "02ec7c205841"
+        },
+        "6383cbbba4f1": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "6383cbbba4f1"
+        },
+        "ecf5d40bb98a": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "ecf5d40bb98a"
+        },
+        "64d421b98c5b": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "64d421b98c5b"
+        },
+        "58b63e273b96-8": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "58b63e273b96-8"
+        },
+        "8eaa2f6c7b8a": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "8eaa2f6c7b8a"
+        },
+        "4c21e4d638ff": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "4c21e4d638ff"
+        },
+        "3dca70312c28": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "3dca70312c28"
+        },
+        "a656477ae709": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "a656477ae709"
+        },
+        "4fe75f50552c": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "4fe75f50552c"
+        },
+        "58b63e273b96-9": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "58b63e273b96-9"
+        },
+        "348303244014": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "348303244014"
+        },
+        "cfeb17271a60": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "cfeb17271a60"
+        },
+        "90c5218f52ac": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.476Z",
+          "lastSeenHash": "90c5218f52ac"
+        }
+      },
+      "archivados": []
+    },
+    "tesis/capitulos/README.md": {
+      "parrafos": {
+        "cae623a21e9c": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.479Z",
+          "lastSeenHash": "cae623a21e9c"
+        },
+        "971398f1cea1": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.479Z",
+          "lastSeenHash": "971398f1cea1"
+        },
+        "55b8caa40f9c": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.479Z",
+          "lastSeenHash": "55b8caa40f9c"
+        },
+        "b662db9589a6": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.479Z",
+          "lastSeenHash": "b662db9589a6"
+        },
+        "bed8d87217f6": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.479Z",
+          "lastSeenHash": "bed8d87217f6"
+        },
+        "5b0cd3d386a6": {
+          "estado": "borrador_nuevo",
+          "notas": "",
+          "updatedAt": "2026-04-23T20:34:08.479Z",
+          "lastSeenHash": "5b0cd3d386a6"
+        }
+      },
+      "archivados": []
+    }
+  },
+  "updatedAt": "2026-04-23T20:35:15.225Z"
+}

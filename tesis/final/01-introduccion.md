@@ -6,7 +6,7 @@ En los ultimos años, las organizaciones de tecnologia han enfrentado una presio
 
 La empresa objeto de este trabajo no es ajena a esta realidad. Durante años, su infraestructura de aplicaciones se sustento sobre **Internet Information Services (IIS)** corriendo en servidores **Windows Server on-premises**, con procesos de despliegue en su mayoria manuales y herramientas de integracion y entrega continua que fueron quedando obsoletas. Este modelo, si bien funcional en su momento, presentaba limitaciones cada vez mas evidentes: tiempos de despliegue prolongados, falta de estandarizacion entre equipos, dificultad para escalar, y una fuerte dependencia de conocimiento no documentado.
 
-[REQUIERE INPUT DEL AUTOR: Descripcion breve de la empresa, de seguros. Editado para versión final (rubro, tamaño aproximado, cantidad de equipos de desarrollo) sin datos que la identifiquen directamente.]
+[REQUIERE INPUT DEL AUTOR: Descripcion breve de la empresa modificado desde GestorT (rubro, tamaño aproximado, cantidad de equipos de desarrollo) sin datos que la identifiquen directamente.]
 
 Frente a este escenario, la organizacion inicio un proceso de modernizacion que busca transformar la forma en que se construye, despliega y opera el software. No se trato de un cambio instantaneo ni de una migracion a la nube publica, sino de una **transicion progresiva** hacia una plataforma basada en **Red Hat OpenShift on-premises**, incorporando practicas de **GitOps**, **infraestructura como codigo** y herramientas modernas de automatizacion. Complementariamente, se utiliza **ARO (Azure Red Hat OpenShift)** para soluciones empaquetadas y servicios especificos que se benefician de un entorno gestionado en la nube.
 
