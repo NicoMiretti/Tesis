@@ -125,9 +125,9 @@
           "lastSeenHash": "46c3384bdfcb"
         },
         "12c7bbce4a45": {
-          "estado": "borrador_nuevo",
+          "estado": "en_redaccion",
           "notas": "",
-          "updatedAt": "2026-04-23T20:34:08.470Z",
+          "updatedAt": "2026-04-23T21:00:49.960Z",
           "lastSeenHash": "12c7bbce4a45"
         },
         "bc539d55f87e": {
@@ -696,5 +696,5 @@
       "archivados": []
     }
   },
-  "updatedAt": "2026-04-23T20:52:02.087Z"
+  "updatedAt": "2026-04-23T21:00:49.960Z"
 }
