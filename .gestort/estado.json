@@ -28,9 +28,9 @@
           "lastSeenHash": "d3f27571c741"
         },
         "359623274a50": {
-          "estado": "en_redaccion",
+          "estado": "validado",
           "notas": "",
-          "updatedAt": "2026-04-23T20:34:56.976Z",
+          "updatedAt": "2026-04-23T20:39:38.772Z",
           "lastSeenHash": "359623274a50",
           "finalText": "[REQUIERE INPUT DEL AUTOR: Descripcion breve de la empresa modificado desde GestorT (rubro, tamaño aproximado, cantidad de equipos de desarrollo) sin datos que la identifiquen directamente.]"
         },
@@ -696,5 +696,5 @@
       "archivados": []
     }
   },
-  "updatedAt": "2026-04-23T20:35:15.225Z"
+  "updatedAt": "2026-04-23T20:43:46.966Z"
 }
